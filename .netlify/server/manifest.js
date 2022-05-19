@@ -28,7 +28,7 @@ const manifest = {
   assets: /* @__PURE__ */ new Set(["favicon.png", "robots.txt", "svelte-welcome.png", "svelte-welcome.webp"]),
   mimeTypes: { ".png": "image/png", ".txt": "text/plain", ".webp": "image/webp" },
   _: {
-    entry: { "file": "start-e4b8bc2a.js", "js": ["start-e4b8bc2a.js", "chunks/index-177c7497.js", "chunks/index-5f5e52b4.js", "chunks/singletons-d1fb5791.js"], "css": [] },
+    entry: { "file": "start-861530a9.js", "js": ["start-861530a9.js", "chunks/index-177c7497.js", "chunks/index-5f5e52b4.js", "chunks/singletons-d1fb5791.js"], "css": [] },
     nodes: [
       () => Promise.resolve().then(() => __toESM(require("./nodes/0.js"))),
       () => Promise.resolve().then(() => __toESM(require("./nodes/1.js"))),
