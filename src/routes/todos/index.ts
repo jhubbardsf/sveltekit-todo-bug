@@ -38,14 +38,6 @@ export const post: RequestHandler = async ({ request, locals }) => {
 	return {};
 };
 
-// If the user has JavaScript disabled, the URL will change to
-// include the method override unless we redirect back to /todos
-const redirect = {
-	status: 301,
-	headers: {
-		location: '/todos'
-	}
-};
 
 export const patch: RequestHandler = async ({ request, locals }) => {
 	const form = await request.formData();
@@ -55,7 +47,12 @@ export const patch: RequestHandler = async ({ request, locals }) => {
 		done: form.has('done') ? !!form.get('done') : undefined
 	});
 
-	return redirect;
+	return {
+		status: 301,
+		headers: {
+			location: '/todos'
+		}
+	};;
 };
 
 export const del: RequestHandler = async ({ request, locals }) => {
@@ -63,5 +60,10 @@ export const del: RequestHandler = async ({ request, locals }) => {
 
 	await api('delete', `todos/${locals.userid}/${form.get('uid')}`);
 
-	return redirect;
+	return {
+		status: 301,
+		headers: {
+			location: '/todos'
+		}
+	};;
 };
