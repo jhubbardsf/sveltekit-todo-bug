@@ -41,7 +41,7 @@ export const post: RequestHandler = async ({ request, locals }) => {
 // If the user has JavaScript disabled, the URL will change to
 // include the method override unless we redirect back to /todos
 const redirect = {
-	status: 303,
+	status: 301,
 	headers: {
 		location: '/todos'
 	}
