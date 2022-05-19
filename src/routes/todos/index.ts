@@ -48,7 +48,7 @@ export const patch: RequestHandler = async ({ request, locals }) => {
 	});
 
 	return {
-		status: 301,
+		status: 303,
 		headers: {
 			location: '/todos'
 		}
